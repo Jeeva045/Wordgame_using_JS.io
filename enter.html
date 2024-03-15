@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <title></title>
+</head>
+<style>
+  
+body{ 
+  width: 100%;
+  height:110vh;
+  background-image: url(bg.jpg);
+  background-size:contain;
+  backdrop-filter: blur(4px);
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+  h1{
+  font-family: 'Montserrat', sans-serif;
+      font-size: 100px;
+      /* background-image: url(home1.jpg);
+      color: transparent;
+      background-clip: text; */
+      color: rgb(16, 79, 131);
+      -webkit-background-clip: text;
+      width: 400px;
+
+
+      position: relative;
+      animation:move 1s;
+      animation-fill-mode:forwards;
+      
+  }
+  @keyframes move{
+    from{
+      bottom:0px;
+    }
+    to{
+     bottom:80px;
+    }
+  }
+  @keyframes moves{
+    from{
+      top:0px;
+    }
+    to{
+      top:60px;
+    }
+  }
+  #img{
+  
+  width: 80%;
+  height: 200px;
+  background-image: url(image7.png);
+  background-size: 300px;
+  background-repeat: no-repeat;
+    animation:move 2s;
+
+  }
+  button{
+    border: none;
+    background-color: inherit;
+    transition: transform .7s ease-in-out;
+    appearance: none;
+    margin-bottom: 80px;
+    width:0;
+    height:0px;
+    position: relative;
+    animation: moves 1s;
+    animation-fill-mode:forwards;
+  }
+  #ty{
+    width: 300px;
+    height: 300px;
+    transition: width 1s,height 1s;
+  }
+  #ty:hover{
+  height: 310px;
+  width:310px;
+  }
+  
+
+  </style>
+<body>
+  <div class="ram">
+    
+  
+<h1>Letter lockout</h1>
+<form action="toggle.html">
+<button  id="e" type="submit">
+  <img src="image7.png" id="ty"alt="imagepng">
+</button>
+</form>
+  </div>
+</body>
+
+</html>

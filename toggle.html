@@ -1,0 +1,566 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <title></title>
+</head>
+<style>
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+#hrt,#coin,#high{
+  background-color:#3F51B5;
+  color:#fff;
+  background-size: cover;
+  border-radius: 10px;
+  margin-bottom: 5px;
+padding: 10px;
+width: 130px;
+}
+
+    body{ 
+    width: 100%;
+    height:110vh;
+    background-image: url(bg.jpg);
+    
+    background-size:contain;
+    backdrop-filter: blur(5px);
+   
+  
+}
+input{
+  border: none;
+  box-shadow: 4px 4px 200px black;
+  border-radius: 20px;
+  padding: 10px;
+  
+}
+button{
+  margin-top: 15px;
+  color: white;
+  padding: 7px;
+  border:none;
+  border-radius: 20px;
+  box-shadow: 4px 4px 200px black;
+  background-color:#3F51B5;
+  color:#fff;
+  
+}
+#submit{
+  margin-right: 70px;
+}
+  #word{
+      font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+ #result,#timer,#score{
+     font-family: 'Montserrat', sans-serif;
+   font-size: 35px;
+   text-align: center;
+   animation: opacity 1s;
+   
+ }
+ #score{
+   animation: opacity 1s;
+ }
+ #below{
+   display: inline;
+   margin-left: 9px;
+ }
+ #input{
+  margin: auto;
+  width: 50%;
+  border: 0px solid green;
+  padding: 0px;
+  margin-bottom: 0px;
+ }
+ 
+#main{
+  border: 3px;
+  padding: 10px;
+  position: relative;
+  width: 300px;
+background-color: transparent;
+
+
+
+}
+#top{
+  font-family: 'Montserrat', sans-serif;
+
+  color: brown;
+  display: flex;
+  flex-direction: column;
+
+
+  margin-top: 20px;
+  animation: opacity 1s;
+}
+.topcontainer{
+   
+   
+    width:93%;
+    /* border: solid; */
+    display: flex;
+    justify-content:right;
+    align-items: center;
+}
+#start{
+  text-align: center;
+  animation: opacity 1s;
+}
+#img{
+  width:300px;
+  height:300px;
+  background-image: url(images1.png);
+  background-size: cover;
+  background-blend-mode: screen;
+  margin-left: 30px;
+  animation: opacity 1s;
+
+}
+#imag{
+  width:300px;
+  height:300px;
+  background-image: url(io.png);
+  background-size: cover;
+  background-blend-mode: screen;
+  margin-left: 35px;
+  animation: opacity 1s;
+}
+#im{
+  width:300px;
+  height:300px;
+  background-image: url(7um.png);
+  background-size: cover;
+  background-blend-mode: screen;
+  margin-left: 45px;
+  animation: opacity 1s;
+}
+#main{
+  
+    border:0px solid black;
+    height: 560px;
+    width: 400px;
+    /* margin-top:10px;
+    margin-left: 35px;
+    margin-right: 60px; */
+    background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% ),  url(butterfly.jpg);
+      background-repeat: no-repeat;
+      
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px black;
+    animation: opacity 1s;
+    
+
+}
+#buy{
+  width: 400px;
+  font-size: 90px;
+  margin-top: 180px;
+  animation: opacity 1s;
+}
+h1{
+margin-top: 40px;
+font-family: 'Montserrat', sans-serif;
+   font-size: 35px;
+   text-align: center;
+}
+#t{
+  margin-left: 130px;
+  margin-right: 100px;
+}
+#t1{
+  margin-left: 155px;
+}
+#io{
+  margin-left: 30px;
+}
+#asd{
+  animation: opacity 1s;
+}
+.container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:1000px){
+  #main,#buy{
+   width:320px;
+  }
+  /* #top{
+    position:relative;
+    margin-left:825px;
+  
+  } */
+  #submit{
+    margin-right: 38px;
+  }
+  #io{
+  margin-left: 0px;
+}
+#t{
+  margin-left: 100px;
+  margin-right: 100px;
+}
+#t1{
+  margin-left: 125px;
+}
+#img{
+    margin-left: 25px;
+}
+#imag{
+    margin-left: 20px;
+}
+#im{
+    margin-left: 35px;
+}
+}
+@keyframes opacity{
+  0%{
+    opacity:0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+</style>
+<body>
+ <div class="topcontainer">
+    <div id="top">
+    
+  
+        <div id="hrt">
+      
+    </div>
+    <div id="coins">
+      <div id="coin1">
+    
+      </div>
+    
+    <div id="coin">
+        
+    </div>
+    </div>
+    <div id="high">
+    
+    </div>
+    </div>
+
+ </div>
+  <h1 id="asd">click start</h1>
+<div class="container">
+    <div id="main">
+
+        <div id="word">
+          
+        </div>
+        <div id="timer">
+          
+        </div>
+        
+        <div id="input">
+          
+        <input type="text" id="text">
+        <br>
+        <button type="submit" id="submit">submit</button>
+        <button type="submit" onclick="start()" id="run">start</button>  
+        </div>
+        
+        <div id="result">
+          
+          
+        </div>
+        <div id="score">
+        
+        </div>
+        
+        <div id="buy">
+          <div id="below">
+            
+          <span><button type="submit" onclick="left()"><</button></span><span id="t">3</span><span id="2"><button id="io"  type="submit" onclick="right()">></button><span><br />
+          </div>
+          <button type="submit" id="t1" onclick="check()">submit</button>
+        </div>
+        <div id="start">
+          <p style="margin-top: 30px;">To buy hearts click,<button type="submit" id="34"onclick="create()">buy</button></p>
+          <p>else click,
+          <a href="enter.html">home</a></p>
+        </div>
+        </div>
+</div>
+<script>
+let yu=document.getElementById("34")
+let nae=document.getElementById("asd")
+let buy=document.getElementById("buy")
+let hih=document.getElementById("high")
+ 
+let high=0
+let ij=sessionStorage.getItem("na")
+high=localStorage.getItem("max")
+nae.innerHTML="Hello "+ ij +", click start";
+ hih.innerHTML="⬆️" +high
+let score=0;
+let hrt=3;
+let coin=150;
+let ti=document.getElementById("t")
+let y=document.getElementById("input")
+let ci=document.getElementById("coin")
+let r=document.getElementById("result")
+let o=document.getElementById("score")
+let cre=document.createElement("div")
+  let h=document.getElementById("hrt")
+  let stat=document.getElementById("start")
+  let str="️⚡️❤️❤️❤️"
+  ci.innerHTML="🌟"+"        "+coin
+  h.innerHTML=str
+let u=document.getElementById("main")
+//u.removeChild(h)
+u.removeChild(stat)
+u.removeChild(buy)
+let j=document.getElementById("run")
+let c=document.getElementById("timer")
+  let b=document.getElementById("word")
+  r.appendChild(cre);
+
+function start()
+{
+ // r.removeChild(cre)
+  j.disabled=true;
+  ci.innerHTML="🌟"+coin;
+  let a=document.getElementById("text")
+ // let y=document.getElementById("input")
+  let b=document.getElementById("word")
+  let c=document.getElementById("timer")
+  //let j=document.getElementById("run")//
+  
+ // let h=document.getElementById("hrt")
+  let u=document.getElementById("main")
+ // u.appendChild(h)
+  r.innerHTML=""
+  o.innerHTML=""
+  a.value=""
+  let v=16
+  let arr=["apple", "orange", "banana", "grape", "kiwi","car", "bus", "bike", "train", "plane", "dog", "cat", "rabbit", "hamster", "goldfish","book", "pen", "pencil", "paper", "notebook","computer", "phone", "tablet", "keyboard", "mouse","tree", "flower", "grass", "bush", "rock","shirt", "pants", "shoes", "hat", "jacket","teacher", "student", "principal", "janitor", "librarian","table", "chair", "desk", "couch", "bed","sun", "moon", "star", "planet", "galaxy"
+]
+  let n=arr[Math.floor(Math.random()*arr.length)]
+  console.log(n)
+  let temp=n
+  
+  let t=n.split("")
+let m= setInterval(timer,1000)
+let k=document.getElementById("submit")
+
+
+k.addEventListener("click",button)
+  
+  function timer()
+  {
+    --v;
+    c.innerHTML=v
+
+    if(v==0)
+  {
+    k.removeEventListener("click",button)
+    clearInterval(m)
+    j.disabled=false;
+    r.appendChild(cre)
+      cre.id="im"
+    r.style.color="indianred"
+    printscore()
+    decreased()
+    j.textContent="retry"
+    
+  }
+  }
+  for(let i=0;i<=(t.length/2);i++)
+  {
+    t[Math.floor(Math.random()*t.length)]="_ "
+  }
+  console.log(t.join(""))
+  b.innerHTML=t.join("")
+  
+
+
+  function button()
+  {
+    j.disabled=false;
+    k.removeEventListener("click",button)
+    let a=document.getElementById("text")
+    if((a.value).toLowerCase()===temp)
+    {
+      r.appendChild(cre)
+      cre.id="imag"
+      clearInterval(m)
+      coin=coin+10
+      ci.innerHTML="🌟"+coin
+      r.style.color="green"
+      y.style.borderColor="green"
+      j.textContent="next"
+    //  o.innerHTML="your score is"+s
+    increment()
+    printscore()
+      
+    }
+    else
+    {
+      console.log("hii")
+      r.appendChild(cre)
+      cre.id="im"
+      y.style.borderColor="red"
+      r.style.color="red"
+      j.textContent="retry"
+      clearInterval(m)
+      printscore()
+      decreased()
+    }
+  }
+  
+}
+function increment()
+{
+  score++;
+  if(score>high)
+  {
+    high=score
+    localStorage.setItem("max",high)
+
+  }
+  
+ // console.log(score)
+}
+function printscore()
+{
+  o.innerHTML="your score is "+score
+}
+function decreased()
+{
+  hrt--;
+console.log(hrt)
+if(hrt==2)
+{
+  
+  h.innerHTML="⚡️❤️❤️"
+}
+else if(hrt==1)
+{
+  h.innerHTML="⚡️❤️"
+}
+else{
+  if(coin<50)
+  {
+    yu.disabled=true;
+  }
+  h.innerHTML="nil"
+  r.innerText=""
+  r.appendChild(cre)
+  cre.id="img"
+  
+  hih.innerHTML="⬆️"+high;
+ u.removeChild(y)
+// y.style.visibility="hidden";
+  u.removeChild(b)
+  u.removeChild(c)
+  u.appendChild(stat)
+  //u.appendChild(buy)
+}
+}
+function check()
+{ 
+  nae.innerHTML="buy"
+  u.removeChild(buy)
+  if(coin>=50){
+  if(ti.textContent==1)
+  {
+    h.innerHTML="⚡️❤️"
+    coin=coin-50
+    hrt=1;
+    u.appendChild(b)
+ci.innerHTML="🌟"+coin;
+
+  nae.innerHTML="click retry";
+  u.appendChild(c)
+  u.appendChild(y)
+  u.appendChild(r)
+  u.appendChild(o)
+ r.removeChild(cre)
+  u.removeChild(stat)
+ u.removeChild(buy)
+ 
+ 
+    
+  }
+  else if((ti.textContent==2)&&(coin>=100))
+  {
+    h.innerHTML="⚡️❤️❤️"
+    
+    coin=coin-100
+    hrt=2;
+    u.appendChild(b)
+ci.innerHTML="🌟"+coin;
+
+  nae.innerHTML="click retry";
+  u.appendChild(c)
+  u.appendChild(y)
+  u.appendChild(r)
+  u.appendChild(o)
+ r.removeChild(cre)
+  u.removeChild(stat)
+ u.removeChild(buy)
+ 
+ 
+  }
+  else if((ti.textContent==3)&&(coin>=150))
+  {
+    h.innerHTML="⚡️❤️❤️❤️"
+    coin=coin-150
+    hrt=3
+    u.appendChild(b)
+ci.innerHTML="🌟"+coin;
+
+  nae.innerHTML="click retry";
+  u.appendChild(c)
+  u.appendChild(y)
+  u.appendChild(r)
+  u.appendChild(o)
+ r.removeChild(cre)
+  u.removeChild(stat)
+ u.removeChild(buy)
+ 
+ 
+  }
+else
+{
+  console.log("insufficient ")
+}
+
+  }
+  ci.innerHTML="🌟"+coin;
+}
+function left()
+{
+  if(Number(ti.textContent)>0)
+  ti.textContent=Number(ti.textContent)-1
+}
+function right()
+{
+  if(Number(ti.textContent)<3)
+  ti.textContent=Number(ti.textContent)+1
+}
+function create()
+{
+  r.removeChild(cre);
+  u.removeChild(o)
+  u.removeChild(stat)
+  u.appendChild(buy)
+}
+</script>
+</body>
+
+</html>
